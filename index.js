@@ -1,8 +1,6 @@
 import express from 'express'
-import { config } from 'dotenv'
 import cors from 'cors'
 import path from 'path'
-const mainProperties = config().parsed
 const app = express()
 app.use(cors())
 app.use(express.json())
@@ -33,8 +31,8 @@ app.get("/getLastMessage", (req, res) => {
 });
 
 
-app.listen(mainProperties.PORT, () => {
-  console.log(`Example app listening on port ${mainProperties.PORT}`)
+app.listen(3000, () => {
+  console.log(`Example app listening on port 3000`)
 })
 
 app.get("*", function (req, res) {
